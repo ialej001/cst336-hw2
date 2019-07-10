@@ -125,7 +125,7 @@ function dealerPlay() {
     console.log(playerScore);
     
     // dealer plays
-    while (dealerScore <= 21) {
+    while (dealerScore <= 17) {
         draw(dealerHand);
         $('#dealerHand').append('<img class="card" src="img/' + dealerHand[(dealerHand.length -1)] + '.gif">');
         dealerScore = checkScore(dealerHand);    

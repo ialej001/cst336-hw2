@@ -207,8 +207,8 @@ $('#betBtn').on("click", function() {
     
     // restart the round
     $('#dealerHand').empty();
-    $('#dealerHand').append('<img id="dealerShown" src="img/BK.gif">');
-    $('#dealerHand').append('<img id="dealerReveal" src="img/BK.gif">');
+    $('#dealerHand').append('<img class="card" id="dealerShown" src="img/BK.gif">');
+    $('#dealerHand').append('<img class="card" id="dealerReveal" src="img/BK.gif">');
     $('#player').empty();
     $('#playerHand').empty();
     

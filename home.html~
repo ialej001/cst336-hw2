@@ -58,6 +58,11 @@
             </div>
         </div>
         
+        <footer>
+            <strong>CSUMB Online CS336: Ivan Alejandre</strong>
+            <br>
+            For educational purposes only.
+        </footer>
         <script type="text/javascript" src="js/blackjack.js"></script>
     </body>
 </html>

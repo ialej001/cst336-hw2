@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blackjack</title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+    </head>
+    <body>
+        <div class="container text-center">
+            <header>
+                <h1>BlackJack</h1>
+            </header>
+            
+            <div>
+                <h3>Dealer's Hand</h3>
+                <div id="dealer">
+                    <img id="dealerShown" src="img/BK.gif">
+                    <img id="dealerReveal" src="img/BK.gif">
+                </div>            
+            </div>
+            <div id="playArea">
+                <div>
+                    <div id="draw">
+                        <h4>Draw Pile</h4>
+                        <img src="img/BK.gif" alt="Click to draw a card">
+                        <button id="drawBtn">Hit Me!</button>
+                        <button id="endRound">Stop!</button>
+                    </div>
+                    <div id="player"></div>
+                </div>
+            </div>
+            <div id="playerHand">
+                <h3>Your Hand</h3>            
+            </div>
+            
+            <div id="bet">
+                <h4>Enter your bet amount here:</h4>            
+                <input type="text" id="betAmount" value="20">
+                <button id="betBtn">Start Round</button>
+                <table>
+                    <tr>
+                        <td><strong>Current Bet Amount</strong></td>     
+                        <td><strong>Current Funds</strong></td>               
+                    </tr>
+                    <tr>
+                        <td id="currentBet">$20</td>
+                        <td id="money">$500</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="js/blackjack.js"></script>
+    </body>
+</html>
+            

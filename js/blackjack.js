@@ -69,8 +69,8 @@ function deal() {
     stackSize--; 
     
     $('#dealerShown').attr("src", "img/" + dealerHand[0] + ".gif");
-    $('#playerHand').append('<img src="img/' + playerHand[0] + '.gif">');
-    $('#playerHand').append('<img src="img/' + playerHand[1] + '.gif">');
+    $('#playerHand').append('<img class="card" src="img/' + playerHand[0] + '.gif">');
+    $('#playerHand').append('<img class="card" src="img/' + playerHand[1] + '.gif">');
     $("#money").html("$" + startingMoney);
 }
 
@@ -127,8 +127,9 @@ function dealerPlay() {
     // dealer plays
     while (dealerScore <= 21) {
         draw(dealerHand);
-        $('#dealer').append('<img src="img/' + dealerHand[(dealerHand.length -1)] + '.gif">');
+        $('#dealerHand').append('<img class="card" src="img/' + dealerHand[(dealerHand.length -1)] + '.gif">');
         dealerScore = checkScore(dealerHand);    
+        
     }
     
     console.log(dealerScore);
@@ -188,7 +189,7 @@ function blackjack(hand) {
 // HANDLERS
 $('#drawBtn').on("click", function() {
     draw(playerHand);
-    $('#playerHand').append('<img src="img/' + playerHand[(playerHand.length - 1)] + '.gif">');
+    $('#playerHand').append('<img class="card" src="img/' + playerHand[(playerHand.length - 1)] + '.gif">');
 });
 
 $('#endRound').on("click", function() {
@@ -205,12 +206,12 @@ $('#betBtn').on("click", function() {
     }
     
     // restart the round
-    $('#dealer').empty();
-    $('#dealer').append('<img id="dealerShown" src="img/BK.gif">');
-    $('#dealer').append('<img id="dealerReveal" src="img/BK.gif">');
+    $('#dealerHand').empty();
+    $('#dealerHand').append('<img id="dealerShown" src="img/BK.gif">');
+    $('#dealerHand').append('<img id="dealerReveal" src="img/BK.gif">');
     $('#player').empty();
     $('#playerHand').empty();
-    $('#playerHand').append("<h3>Your Hand</h3>")
+    
     playerHand = [];
     dealerHand = [];
     if (stackSize > 20) {

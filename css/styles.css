@@ -2,6 +2,11 @@ body {
     background-color: #87d36b;
 }
 
+footer {
+    margin-top: 50px;
+    text-align: center;
+}
+
 #dealerHand {
     padding: 15px;
 }
